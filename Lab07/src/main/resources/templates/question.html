@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Question</title>
+</head>
+<body>
+<form th:action="@{/get_question}" method="post">
+  <!-- CSRF token for Spring Security -->
+  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+  <p>Question <span th:text="${count.count}"></span>:
+     <span th:text="${myString.myString}"></span></p>
+
+  <input type="radio" id="trueOption" name="answer" value="true">
+  <label for="trueOption">True</label><br>
+  <input type="radio" id="falseOption" name="answer" value="false">
+  <label for="falseOption">False</label><br><br>
+  <input type="submit" value="Submit">
+</form>
+<a href="/reset">Reset</a>
+</body>
+</html>
