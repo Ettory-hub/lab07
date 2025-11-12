@@ -13,6 +13,7 @@ Visit https://start.spring.io/
 # Build and Run
 
 In the terminal: 
+cd Lab07
 mvn clean install
 mvn spring-boot:run
 
